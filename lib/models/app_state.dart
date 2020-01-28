@@ -8,7 +8,7 @@ class AppState {
     this.submittedText,
   });
 
-  factory AppState.loading() => new AppState(isLoading: true);
+  factory AppState.loading() => AppState(isLoading: true);
 
   @override
   String toString() {

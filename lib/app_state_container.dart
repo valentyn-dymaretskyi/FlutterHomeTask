@@ -17,7 +17,7 @@ class AppStateContainer extends StatefulWidget {
   }
 
   @override
-  _AppStateContainerState createState() => new _AppStateContainerState();
+  _AppStateContainerState createState() => _AppStateContainerState();
 }
 
 class _AppStateContainerState extends State<AppStateContainer> {
@@ -29,7 +29,7 @@ class _AppStateContainerState extends State<AppStateContainer> {
     if (widget.state != null) {
       state = widget.state;
     } else {
-      state = new AppState.loading();
+      state = AppState.loading();
       _onLoading();
     }
   }
@@ -42,7 +42,7 @@ class _AppStateContainerState extends State<AppStateContainer> {
   }
 
   void _onLoading() {
-    new Future.delayed(new Duration(seconds: 2), ()
+    Future.delayed(Duration(seconds: 2), ()
     {
       setState(() {
         state.isLoading = false;
@@ -52,7 +52,7 @@ class _AppStateContainerState extends State<AppStateContainer> {
 
   @override
   Widget build(BuildContext context) {
-    return new _InheritedStateContainer(
+    return _InheritedStateContainer(
       data: this,
       child: widget.child,
     );

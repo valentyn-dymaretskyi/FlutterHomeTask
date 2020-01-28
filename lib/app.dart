@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 class AppRootWidget extends StatefulWidget {
   @override
-  AppRootWidgetState createState() => new AppRootWidgetState();
+  AppRootWidgetState createState() => AppRootWidgetState();
 }
 
 class AppRootWidgetState extends State<AppRootWidget> {
-  ThemeData get _themeData => new ThemeData(
+  ThemeData get _themeData => ThemeData(
     primaryColor: Colors.cyan,
     accentColor: Colors.indigo,
     scaffoldBackgroundColor: Colors.grey[300],
@@ -16,11 +16,11 @@ class AppRootWidgetState extends State<AppRootWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       theme: _themeData,
       routes: {
-        '/': (BuildContext context) => new HomeScreen(),
-        '/auth': (BuildContext context) => new AuthScreen(),
+        '/': (BuildContext context) => HomeScreen(),
+        '/auth': (BuildContext context) => AuthScreen(),
       },
     );
   }

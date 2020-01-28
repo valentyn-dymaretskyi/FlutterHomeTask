@@ -4,7 +4,7 @@ import 'package:home_task/app_state_container.dart';
 
 class AuthScreen extends StatefulWidget {
   @override
-  _AuthScreenState createState() => new _AuthScreenState();
+  _AuthScreenState createState() => _AuthScreenState();
 }
 
 class _AuthScreenState extends State<AuthScreen> {
@@ -26,13 +26,17 @@ class _AuthScreenState extends State<AuthScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            TextFormField(
-              validator: (value) {
-                if (value.length < 3) {
-                  return 'Minimum 3 characters required';
-                }
-                return null;
-              },
+            Padding(
+                padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                child: TextFormField(
+                  decoration: InputDecoration(hintText: 'Some text'),
+                  validator: (value) {
+                    if (value.length < 3) {
+                      return 'Minimum 3 characters required';
+                    }
+                    return null;
+                  },
+                ),
             ),
             RaisedButton(
               onPressed: () {

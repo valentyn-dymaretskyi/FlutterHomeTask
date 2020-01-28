@@ -7,7 +7,7 @@ import 'map_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
-  _HomeScreenState createState() => new _HomeScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
